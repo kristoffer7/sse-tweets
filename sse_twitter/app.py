@@ -22,10 +22,12 @@ class Home(HTTPEndpoint):
     async def get(self, request: Request):
         return HTMLResponse(
             """
+            <!DOCTYPE html>
             <html>
             <head>
                 <script src="https://unpkg.com/htmx.org@1.7.0"></script>
                 <script src="https://unpkg.com/htmx.org@1.7.0/dist/ext/sse.js"></script>
+                <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
             </head>
             <body>
                 <h1>Tweets over SSE</h1>
