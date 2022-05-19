@@ -75,7 +75,8 @@ CHECK_NEW_TWEETS_WAIT_TIME_SEC = 5.0
 
 
 async def event_generator(request: Request):
-    """Yields a number until client disconnect"""
+    """Yields html formatted stream of tweets as requested until client
+    disconnects"""
     try:
         logger.debug(f"{request.url=} {request.query_params=}")
         query = urllib.parse.unquote_plus(request.query_params["q"])
